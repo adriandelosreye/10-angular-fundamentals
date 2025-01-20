@@ -1,0 +1,25 @@
+<section class="questions" aria-labelledby="questions-title">
+  <div class="questions__container">
+    <p id="questions-title" class="questions__title">
+      Frequently Asked Questions
+    </p>
+    <div class="questions__content" role="list">
+      @for (question of questions; track $index) {
+      <details class="questions__item" role="listitem">
+        <summary class="questions__item__title">
+          {{ question.title }}
+          <span
+            class="questions__item__icon"
+            aria-hidden="true"
+            data-closed="+"
+            data-open="x"
+          ></span>
+        </summary>
+        <p class="questions__item__content">
+          {{ question.text }}
+        </p>
+      </details>
+      }
+    </div>
+  </div>
+</section>

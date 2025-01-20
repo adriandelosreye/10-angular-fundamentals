@@ -1,0 +1,60 @@
+<section
+  class="features"
+  [class.features--second]="featureData()!.isSecond"
+  aria-labelledby="featuresHeading"
+>
+  <div class="features__primary">
+    <div #mediaContainer class="features__primary__media" tabindex="0">
+      @if (featureData()!.phoneImage1) {
+      <div class="card left">
+        <img
+          [src]="featureData()!.phoneImage1"
+          alt="Phone"
+          alt="Mobile phone displaying Lóvi app screen"
+        />
+      </div>
+      }
+      <div class="features__primary__video">
+        <video
+          [src]="featureData()!.videoSrc"
+          autoplay
+          muted
+          loop
+          alt="Video of the phone displaying the Lóvi app screen"
+        ></video>
+      </div>
+      @if (featureData()!.phoneImage2) {
+      <div class="card right">
+        <img
+          [src]="featureData()!.phoneImage2"
+          alt="Phone"
+          alt="Mobile phone displaying Lóvi app screen"
+        />
+      </div>
+      }
+    </div>
+    <div class="features__primary__text">
+      <h3 class="features__primary__title">
+        {{ featureData()!.title }}
+      </h3>
+      <img [src]="featureData()!.svgIcon" alt="Svg icon" class="svg-icon" />
+    </div>
+  </div>
+  <div class="features__section">
+    @for (subFeature of featureData()!.subFeatures; track $index) {
+    <div class="features__primary features__primary--sub" tabindex="0">
+      <img
+        [src]="subFeature.imageSrc"
+        [alt]="subFeature.text"
+        [class.features__primary--sub__image]="subFeature.subtitle"
+      />
+      <p>{{ subFeature.text }}</p>
+      @if(subFeature.subtitle){
+      <span class="features__primary--sub--subtitle">{{
+        subFeature.subtitle
+      }}</span>
+      }
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="testimonials" aria-labelledby="testimonialsHeading">
+  <div class="testimonials__container">
+    <p>Loved by both beginners & enthusiasts</p>
+    <div class="testimonials__carousel-wrapper" aria-live="polite">
+      <ul class="testimonials__carousel" role="list">
+        @for (testimonial of testimonials; track $index) {
+        <li class="testimonials__slide" role="listitem">
+          <img
+            [src]="testimonial.imageUrl"
+            alt="Testimonial 1"
+            class="testimonials__image"
+            aria-label="User testimonial for the product"
+          />
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>
