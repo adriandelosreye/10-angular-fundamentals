@@ -8,6 +8,10 @@ import gsap from 'gsap';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent implements AfterViewInit {
+  public products: string[] = [
+    "assets/images/miniProduct.png",
+    "assets/images/miniProduct2.png",
+  ]
   ngAfterViewInit(): void {
     this.animateHeroMain();
     this.animateHeroImages();

@@ -30,10 +30,9 @@
     <div class="footer__nav">
       <div class="footer__options">
         <p>2024 © Digital Skincare</p>
-        <a href="#"> Careers </a>
-        <a href="#"> Privacy policy </a>
-        <a href="#"> Money-back policy </a>
-        <a href="#"> Terms of use </a>
+        @for (link of links; track $index) {
+        <a href="#"> {{ link }} </a>
+        }
       </div>
       <p class="footer__options--badge">Built by the sea in Cyprus</p>
     </div>

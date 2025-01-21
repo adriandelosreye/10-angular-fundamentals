@@ -1,0 +1,32 @@
+<div class="recommendation">
+  <img src="assets/images/profile1.png" alt="woman" />
+  <div class="recommendation__container">
+    <div class="recommendation__message" tabindex="0">
+      <p class="recommendation__message_badge">
+        Based on your SkinID and current routine
+      </p>
+      <p>
+        Consider adding a serum with retinol or a retinoid to your evening
+        routine to slow down the skin-aging process:
+      </p>
+    </div>
+    <div class="recommendation__products">
+      @for (product of products; track $index) {
+      <div class="recommendation__products__item">
+        <div class="recommendation__products__item__value">
+          <p>
+            <span>{{ product.rating }}</span> / 100
+          </p>
+        </div>
+        <img [src]="product.img" alt="product" />
+        <p class="recommendation__products__item__title">
+          {{ product.title }}
+        </p>
+        <p class="recommendation__products__item__price">
+          {{ product.price }}
+        </p>
+      </div>
+      }
+    </div>
+  </div>
+</div>

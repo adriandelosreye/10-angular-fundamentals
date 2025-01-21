@@ -7,6 +7,12 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent implements AfterViewInit {
+  public links: string[] = [
+    "Careers",
+    "Privacy policy",
+    "Money-back policy",
+    "Terms of use"
+  ];
 
   constructor() {}
 

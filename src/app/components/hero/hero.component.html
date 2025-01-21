@@ -15,21 +15,9 @@
         alt="Phone displaying the interface"
       />
       <div class="hero__products">
-        <img
-          class="hero__product"
-          src="assets/images/miniProduct.png"
-          alt="Product 1"
-        />
-        <img
-          class="hero__product"
-          src="assets/images/miniProduct2.png"
-          alt="Product 2"
-        />
-        <img
-          class="hero__product"
-          src="assets/images/miniProduct2.png"
-          alt="Product 2"
-        />
+        @for (product of products; track $index) {
+        <img class="hero__product" [src]="product" alt="Product {{ $index }}" />
+        }
       </div>
     </div>
     <div class="hero__text">

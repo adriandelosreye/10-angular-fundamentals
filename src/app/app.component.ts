@@ -11,6 +11,7 @@ import {
   FeatureData,
   FeaturesComponent,
 } from './components/features/features.component';
+import { IconComponent } from './components/icon/icon.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import {
     StateComponent,
     FooterComponent,
     FeaturesComponent,
+    IconComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

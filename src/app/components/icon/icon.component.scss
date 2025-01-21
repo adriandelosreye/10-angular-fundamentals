@@ -1,0 +1,22 @@
+.icon-site {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  justify-content: end;
+
+  & img {
+    width: 90px;
+    animation: rotate 10s linear infinite;
+    border-radius: 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
